@@ -162,7 +162,8 @@ class AccessPoint(object):
             hostapd_config['wpa_passphrase'] = self.psk
 
         # create the option dictionary
-        hostapd_options = {'debug_level': hostapd_constants.HOSTAPD_DEBUG_OFF}
+        hostapd_options = {'debug_level': hostapd_constants.HOSTAPD_DEBUG_OFF,
+                           'mute': True}
 
         try:
             self.hostapd_object = hostapd_controller.Hostapd()
