@@ -163,7 +163,8 @@ class AccessPoint(object):
 
         # create the option dictionary
         hostapd_options = {'debug_level': hostapd_constants.HOSTAPD_DEBUG_OFF,
-                           'mute': True}
+                           'mute': True,
+                           "eloop_term_disable": True}
 
         try:
             self.hostapd_object = hostapd_controller.Hostapd()
